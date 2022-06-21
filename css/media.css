@@ -1,0 +1,116 @@
+:root {
+  --primary_color: #1a3c40;
+  --primary_shade: #417d7a;
+  --para_color: #069a8e;
+  --helper_color: #1d5c63;
+  --white: #ede6db;
+  --bg_color: #f2f2f2;
+}
+/* --------------------- media Query --------------------- */
+@media (max-width: 1250px) {
+  .container {
+    padding: 0 6rem;
+  }
+  html {
+    font-size: 56.25%;
+  }
+}
+@media (max-width: 980px) {
+  .container {
+    max-width: 96rem;
+  }
+  .hero_section .grid_two_col {
+    grid-template-columns: 1fr;
+  }
+  .hero_section .hero_icon .grid_two_col {
+    grid-template-columns: 1fr 1fr;
+  }
+  .navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(65, 125, 122, 0.694);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(100%);
+    transition: all 0.3s linear;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: none;
+  }
+  .navbar .navbar_link {
+    color: black;
+  }
+  .navbar .navbar_list {
+    display: flex;
+    flex-direction: column;
+  }
+  .mobile_nav_btn {
+    display: block;
+    z-index: 1000;
+  }
+  .active .navbar {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: none;
+    transform: translateX(0);
+    z-index: 999;
+  }
+  .active .mobile_nav_btn .mobile_nav_icon[name="close"] {
+    display: block;
+  }
+  .active .mobile_nav_btn .mobile_nav_icon[name="grid"] {
+    display: none;
+  }
+  .hero_img img {
+    width: 60%;
+  }
+  .section::before {
+    height: 30%;
+  }
+  .hero_img .hero_img_overlay {
+    width: 80%;
+    left: 0;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    max-width: 72rem;
+  }
+  .hero_img img {
+    width: 80%;
+  }
+  .hero_img .hero_img_overlay {
+    width: 90%;
+    left: 0;
+  }
+}
+@media (max-width: 464px) {
+  .container {
+    max-width: 46rem;
+  }
+  .section::before {
+    height: 10%;
+  }
+  .hero_img img {
+    width: 100%;
+  }
+  .hero_img .hero_img_overlay {
+    width: 100%;
+    left: 0;
+  }
+  .hero_img_overlay .para {
+    color: var(--bg_color);
+    font-size: 1rem;
+  }
+  .hero_img_overlay {
+    padding: 0.2rem 0.8rem;
+  }
+}

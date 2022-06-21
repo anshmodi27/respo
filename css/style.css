@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caesar+Dressing&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Averia+Sans+Libre:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Indie Flower", cursive;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  overflow-x: hidden;
+}
+:root {
+  --primary_color: #1a3c40;
+  --primary_shade: #417d7a;
+  --para_color: #069a8e;
+  --helper_color: #1d5c63;
+  --white: #ede6db;
+  --bg_color: #f2f2f2;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+  color: var(--primary_shade);
+}
+img {
+  display: inline-block;
+  width: 100%;
+}
+li {
+  list-style: none;
+}
+h1,
+h2,
+h3,
+h4 {
+  color: var(--primary_color);
+}
+.para {
+  font-size: 1.4rem;
+  line-height: 1.7;
+  font-weight: 400;
+  color: var(--para_color);
+  font-family: "Averia Sans Libre", cursive;
+}
+
+/* --------------------- header & navbar style --------------------- */
+.header {
+  height: 9.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 6.5rem;
+  position: relative;
+}
+.logo {
+  font-size: 2.7rem;
+  font-weight: bold;
+  font-family: "Caesar Dressing", cursive;
+  letter-spacing: 0.4rem;
+}
+.logo span {
+  font-size: 4rem;
+  font-weight: bold;
+  font-family: "Caesar Dressing", cursive;
+  color: var(--primary_color);
+}
+.navbar {
+  display: flex;
+  align-items: center;
+}
+.navbar_list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3.5rem;
+  font-size: 1.7rem;
+}
+.navbar_list .navbar_btn {
+  padding: 0.6rem 1.2rem;
+  background-color: var(--white);
+  border: 1px solid var(--helper_color);
+  color: var(--helper_color);
+  border-radius: 5rem;
+  transition: all 0.3s ease-in-out;
+}
+.navbar_list .navbar_link:hover,
+.navbar_list .navbar_link:active {
+  color: var(--helper_color);
+}
+.navbar_list .navbar_btn:hover,
+.navbar_list .navbar_btn:active {
+  background-color: var(--helper_color);
+  color: var(--white);
+}
+.mobile_nav_icon {
+  font-size: 3rem;
+  color: var(--primary_shade);
+}
+.mobile_nav_btn {
+  display: none;
+}
+.mobile_nav_icon[name="close"] {
+  display: none;
+}
+
+.section {
+  padding: 9.6rem 0;
+}
+.container {
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+}
+.grid {
+  display: grid;
+  gap: 9.6rem;
+}
+.grid_two_col {
+  grid-template-columns: repeat(2, 1fr);
+}
+.btn {
+  font-size: 1.6rem;
+  text-transform: capitalize;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6rem;
+  background-color: var(--helper_color);
+  color: var(--white);
+  transition: all 0.2s linear;
+}
+.btn:hover,
+.btn:active {
+  transform: scale(1.05);
+}
+
+/* --------------------- hero style --------------------- */
+
+.hero_section {
+  position: relative;
+}
+.hero_section::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  bottom: 9.6rem;
+  right: 0;
+  width: 30%;
+  height: 50%;
+  background-color: var(--bg_color);
+  z-index: -1;
+}
+.primary_heading {
+  font-size: 6rem;
+  font-weight: 700;
+}
+.hero_section .para {
+  margin-top: 2rem;
+  margin-bottom: 3.2rem;
+}
+.hero_icon {
+  margin-top: 4.2rem;
+}
+.hero_icon .icon {
+  font-size: 6rem;
+  position: relative;
+  color: var(--primary_color);
+}
+.hero_icon .icon::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60%;
+  height: 60%;
+  background-color: var(--helper_color);
+  z-index: -1;
+  border-radius: 50%;
+  opacity: 0.7;
+}
+.hero_icon h2 {
+  font-size: 2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.hero_section .hero_icon_style .para {
+  line-height: 1.6;
+  font-size: 1.4rem;
+}
+.hero_img {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+}
+.hero_img img {
+  height: 90%;
+  border-radius: 5rem;
+  background: #e0e0e0;
+  box-shadow: -22px -22px 44px #aaaaaa, 22px 22px 44px #ffffff;
+}
+.hero_img_overlay {
+  position: absolute;
+  bottom: 0;
+  left: -5;
+  padding: 2.4rem;
+  bottom: 0;
+  left: -10%;
+  border-bottom-left-radius: 1.5rem;
+  background: rgba(29, 92, 99, 0.5);
+  box-shadow: 0 8px 32px 0 rgba(31, 86, 135, 0.37);
+  backdrop-filter: blur(3.5px);
+  -webkit-backdrop-filter: blur(3.5px);
+}
+.hero_img_overlay .para {
+  color: var(--bg_color);
+}
+.hero_img_overlay .para:nth-child(2) {
+  margin: 0;
+  font-weight: bold;
+}
+.hero_img_overlay .para:last-child {
+  margin: 0;
+}
